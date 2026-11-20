@@ -3,192 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="مبادرة نحو التحول الرقمي لمدرسة سكر سنار النموذجية، بإشراف رابطة طلاب مدرسة سكر سنار النموذجية بالجامعات و المعاهد العليا.">
-  <meta name="theme-color" content="#102744">
-  <title>نحو التحول الرقمي | مدرسة سكر سنار النموذجية</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
-    :root{--navy:#102744;--navy2:#193e61;--gold:#dfb65f;--ink:#1c2e40;--muted:#68798a;--paper:#f5f8fb;--line:#e5ebf0;--white:#fff;--green:#168b61;--blue:#2374d8}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;font-family:"Cairo",Tahoma,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.85}
-    a{color:inherit}.container{width:min(1120px,calc(100% - 40px));margin:auto}
-    .header{height:78px;position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid #e9eef3}
-    .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}.brandmark{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:var(--navy);color:var(--gold);font-size:23px;font-weight:900}.brand strong,.brand small{display:block;line-height:1.4}.brand strong{font-size:14px}.brand small{font-size:10px;color:var(--muted)}
-    .links{display:flex;align-items:center;gap:25px}.links a{text-decoration:none;color:#405366;font-size:12px;font-weight:800}.links a:hover{color:#a77b2d}.menu{display:none;border:0;background:none;color:var(--navy);font-size:26px}
-    .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#0d2036,#173d61);color:#fff;min-height:525px;display:flex;align-items:center}
-    .hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff18;border-radius:50%;pointer-events:none}.hero:before{width:500px;height:500px;left:-170px;top:-220px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff05}.hero:after{width:250px;height:250px;right:45%;bottom:-190px;box-shadow:0 0 0 35px #ffffff08}
-    .hero-grid{position:relative;z-index:1;padding:76px 0;max-width:790px}.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 13px;border:1px solid #dfb65f66;border-radius:30px;color:#f0d18f;font-size:11px;font-weight:800;background:#dfb65f12}
-    h1{font-size:clamp(32px,5vw,53px);line-height:1.42;margin:18px 0 14px;font-weight:900}.hero h1 span{color:var(--gold)}.hero p{max-width:700px;color:#d5e0e9;font-size:15px;margin:0 0 28px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 21px;border-radius:9px;text-decoration:none;font-size:12px;font-weight:900;transition:.2s}.primary{background:var(--gold);color:#172c42}.secondary{border:1px solid #ffffff70;color:#fff}.btn:hover{transform:translateY(-2px)}
-    .hero-foot{position:absolute;bottom:18px;left:20px;color:#c7d4df;font-size:10px;display:flex;align-items:center;gap:10px}.hero-foot i{width:45px;height:1px;background:var(--gold)}
-    .status{background:#fff;border-bottom:1px solid var(--line)}.status-inner{display:flex;align-items:center;justify-content:center;gap:10px;padding:13px 0;color:#536577;font-size:11px;text-align:center}.dot{width:8px;height:8px;border-radius:50%;background:#d6a644;display:inline-block}
-    .section{padding:82px 0}.tag{font-size:11px;color:#a77b2d;font-weight:900}.heading{font-size:33px;line-height:1.5;color:var(--navy);margin:6px 0 15px;font-weight:900}.intro{font-size:15px;color:#526477;max-width:790px;margin:0}
-    .about{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}.vision-card{border:1px solid var(--line);background:linear-gradient(145deg,#f8fafc,#f1f5f8);border-radius:18px;padding:30px;position:relative;overflow:hidden}.vision-card:after{content:"";position:absolute;width:170px;height:170px;border:25px solid #dfb65f20;border-radius:50%;left:-90px;bottom:-100px}.vision-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:#f1e8d5;color:#a77b2d;font-size:25px}.vision-card h3{color:var(--navy);font-size:19px;margin:15px 0 7px}.vision-card p{color:var(--muted);font-size:12px;margin:0}
-    .features{background:var(--paper)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}.section-head .heading{margin-bottom:0}.subnote{font-size:10px;color:var(--muted);max-width:260px}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.feature{background:#fff;border:1px solid var(--line);border-radius:15px;padding:23px}.feature .num{color:#b48a3b;font-size:11px;font-weight:900}.feature h3{font-size:16px;color:var(--navy);margin:7px 0}.feature p{font-size:12px;color:var(--muted);margin:0}
-    .roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:27px}.step{border-right:2px solid var(--gold);padding:4px 14px 4px 0}.step b{display:block;color:var(--navy);font-size:12px}.step span{color:var(--muted);font-size:10px}
-    .participate{background:var(--navy);color:#fff;padding:76px 0}.participate .heading{color:#fff}.participate .intro{color:#cbd7e1}.participate-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.channels{display:grid;gap:12px}.channel{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid #ffffff24;background:#ffffff0a;border-radius:13px}.channel-icon{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;font-size:21px;background:#ffffff13}.channel strong,.channel small{display:block}.channel strong{font-size:12px}.channel small{font-size:10px;color:#c2d0dc}.pending{margin-right:auto;font-size:9px;color:#f0d18f;border:1px solid #dfb65f55;padding:4px 8px;border-radius:20px;white-space:nowrap}
-    .responsibility{background:#f7f9fb;padding:48px 0}.responsibility-box{display:flex;align-items:center;gap:20px;padding:23px 26px;border:1px solid var(--line);background:#fff;border-radius:15px}.resp-icon{width:48px;height:48px;flex:0 0 auto;border-radius:14px;background:#eef2f6;color:var(--navy);display:grid;place-items:center;font-size:23px}.responsibility h3{font-size:14px;color:var(--navy);margin:0 0 3px}.responsibility p{font-size:11px;color:var(--muted);margin:0}
-    .footer{background:#091b2d;color:#b8c6d2;padding:26px 0 20px}.footer-top{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-name{font-size:12px;font-weight:800;color:#fff}.hashtag{font-size:18px;font-weight:900;color:var(--gold);text-decoration:none}.copyright{border-top:1px solid #ffffff18;margin-top:18px;padding-top:14px;font-size:9px;color:#8fa1b1;display:flex;justify-content:space-between;gap:15px}
-    @media(max-width:760px){.container{width:min(100% - 30px,560px)}.header{height:68px}.menu{display:block}.links{display:none;position:absolute;top:68px;right:0;left:0;background:#fff;padding:15px 25px 20px;box-shadow:0 12px 18px #102b4615;flex-direction:column;align-items:stretch;gap:13px}.links.open{display:flex}.hero{min-height:490px}.hero-grid{padding:65px 0}.hero p{font-size:13px}.section{padding:60px 0}.about,.participate-grid{grid-template-columns:1fr;gap:27px}.heading{font-size:28px}.cards{grid-template-columns:1fr}.roadmap{grid-template-columns:1fr 1fr;row-gap:20px}.section-head{display:block}.subnote{margin-top:8px}.participate{padding:58px 0}.responsibility-box{align-items:flex-start;padding:18px}.footer-top,.copyright{align-items:flex-start;flex-direction:column}.hashtag{font-size:17px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-  
-    /* Visual refinement: richer depth, softer geometry, and clearer interactions */
-    body{background:#fbfcfe}
-    .header{box-shadow:0 5px 24px #10274408}
-    .brandmark{box-shadow:0 8px 20px #10274425;position:relative}
-    .brandmark:after{content:"";position:absolute;inset:-5px;border:1px solid #dfb65f66;border-radius:18px}
-    .hero{background:
-      radial-gradient(circle at 12% 22%,#dfb65f24 0,transparent 26%),
-      radial-gradient(circle at 85% 85%,#3e83b844 0,transparent 30%),
-      linear-gradient(122deg,#091a2d 0%,#123454 55%,#1b4569 100%)}
-    .hero:before{width:560px;height:560px;left:-180px;top:-250px;border-color:#ffffff20;box-shadow:0 0 0 38px #ffffff08,0 0 0 82px #ffffff06,0 0 0 128px #ffffff04}
-    .hero:after{width:310px;height:310px;right:55%;bottom:-225px;border-color:#dfb65f38;box-shadow:0 0 0 38px #dfb65f0b,0 0 0 76px #dfb65f08}
-    .hero-grid{max-width:850px}
-    .pill{backdrop-filter:blur(8px);box-shadow:inset 0 0 20px #dfb65f0b}
-    .hero h1{letter-spacing:-.7px;text-shadow:0 5px 28px #00000020}
-    .hero h1 span{background:linear-gradient(100deg,#f5d995,#dcae50);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero p{line-height:2.15}
-    .btn{border-radius:12px;padding:13px 23px;box-shadow:0 8px 22px #00000012}
-    .primary{background:linear-gradient(135deg,#f1d18c,#d9ad55)}
-    .secondary{background:#ffffff0b;backdrop-filter:blur(8px)}
-    .status-inner{padding:15px 0}
-    .dot{box-shadow:0 0 0 5px #d6a64420}
-    .section{padding-top:92px;padding-bottom:92px}
-    .tag{display:inline-flex;align-items:center;gap:9px;letter-spacing:.2px}
-    .tag:before{content:"";width:23px;height:2px;background:var(--gold);border-radius:2px}
-    .heading{letter-spacing:-.5px}
-    .intro{line-height:2.15}
-    .vision-card{border-radius:24px;box-shadow:0 18px 48px #1027440b;padding:34px;background:linear-gradient(145deg,#fff,#f1f5f8)}
-    .vision-icon{box-shadow:0 7px 18px #a77b2d18}
-    .features{background:linear-gradient(180deg,#f2f6fa,#f8fafc)}
-    .feature{border-radius:19px;padding:25px 24px;box-shadow:0 8px 24px #10274408;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden}
-    .feature:after{content:"";position:absolute;width:85px;height:85px;border:1px solid #dfb65f35;border-radius:50%;left:-43px;bottom:-48px;transition:transform .3s}
-    .feature:hover{transform:translateY(-5px);box-shadow:0 16px 32px #10274412;border-color:#dfb65f80}
-    .feature:hover:after{transform:scale(1.35)}
-    .feature .num{display:inline-block;padding:4px 9px;border-radius:20px;background:#f6f0e4;color:#9a7029}
-    .feature h3{margin-top:12px}
-    .step{padding-top:8px;padding-bottom:8px}
-    .step b{font-size:13px;margin-bottom:4px}
-    .participate{background:
-      radial-gradient(circle at 90% 10%,#dfb65f16 0,transparent 28%),
-      linear-gradient(125deg,#091b2e,#123756 70%,#174568)}
-    .participate .intro{line-height:2.1}
-    .channel{border-radius:17px;padding:17px 18px;transition:transform .2s,border-color .2s,background .2s}
-    .channel-link{text-decoration:none;color:inherit}
-    .channel-link:hover{transform:translateX(-4px);border-color:#dfb65f99;background:#ffffff12}
-    .channel-icon{flex:0 0 44px;box-shadow:inset 0 0 0 1px #ffffff12}
-    .whatsapp .channel-icon{background:#168b6130;color:#8ce0b9}
-    .facebook .channel-icon{background:#2374d830;color:#9bc4ff;font-weight:900}
-    .channel-action{margin-right:auto;color:#f0d18f;font-size:10px;font-weight:900;white-space:nowrap}
-    .channel-action b{font-size:15px;margin-right:5px}
-    .responsibility{background:linear-gradient(180deg,#f7f9fb,#eef3f7)}
-    .responsibility-box{border-radius:19px;box-shadow:0 10px 28px #10274408}
-    .resp-icon{box-shadow:inset 0 0 0 1px #dce4ec}
-    .footer{background:linear-gradient(115deg,#071626,#0d2942)}
-    .hashtag{transition:color .2s}
-    .hashtag:hover{color:#ffe4a6}
-    @media(max-width:760px){
-      .section{padding-top:65px;padding-bottom:65px}
-      .hero{background:
-        radial-gradient(circle at 10% 18%,#dfb65f20 0,transparent 34%),
-        linear-gradient(145deg,#091a2d,#174365)}
-      .hero h1{letter-spacing:0}
-      .feature:hover,.channel-link:hover{transform:none}
-      .channel{gap:10px;padding:14px 12px}
-      .channel-action{font-size:9px}
-    }
-
-  </style>
+  <meta name="theme-color" content="#10264d">
+  <meta name="description" content="رابطة مدرسة سكر سنار النموذجية؛ مساحة تجمع الطلاب الحاليين والجامعيين والخريجين والمعلمين ومحبي المدرسة.">
+  <meta property="og:title" content="رابطة مدرسة سكر سنار النموذجية">
+  <meta property="og:description" content="مدرستنا تجمعنا — نبقى على تواصل">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Zezo200241/sukar-sennar-v2@5092ab20a64b64339e44e44df9dec52d908aeaf6/assets/school-cover.jpg">
+  <title>رابطة مدرسة سكر سنار النموذجية</title>
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Zezo200241/sukar-sennar-v2@5092ab20a64b64339e44e44df9dec52d908aeaf6/assets/association-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="#home" aria-label="بداية الصفحة"><span class="brandmark">س</span><span><strong>مدرسة سكر سنار النموذجية</strong><small>مبادرة نحو التحول الرقمي</small></span></a>
-    <button class="menu" aria-label="فتح القائمة" aria-expanded="false">☰</button>
-    <nav class="links" aria-label="القائمة الرئيسية">
-      <a href="#home">الرئيسية</a><a href="#about">عن المبادرة</a><a href="#features">ماذا نخطط؟</a><a href="#participate">شاركنا رأيك</a>
-    </nav>
-  </div>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="رابطة مدرسة سكر سنار النموذجية">
+    <img src="https://cdn.jsdelivr.net/gh/Zezo200241/sukar-sennar-v2@5092ab20a64b64339e44e44df9dec52d908aeaf6/assets/association-logo.png" alt="الشعار الرسمي للرابطة">
+    <span>رابطة مدرسة سكر سنار النموذجية</span>
+  </a>
+  <button class="menu" id="menuBtn" type="button" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+  <nav id="nav" aria-label="القائمة الرئيسية">
+    <a href="#about">من نحن</a>
+    <a href="#vision">رؤيتنا</a>
+    <a href="#goals">أهدافنا</a>
+    <a href="#posts">المنشورات</a>
+    <a href="#contact">التواصل</a>
+  </nav>
 </header>
-<main>
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <span class="pill">مبادرة طلابية · نسخة تعريفية تجريبية</span>
-      <h1>نحو <span>التحول الرقمي</span><br>لمدرسة سكر سنار النموذجية</h1>
-      <p>خطوة نحو بيئة مدرسية أكثر ترابطاً وتطوراً؛ نعمل على بناء مساحة رقمية تسهّل الوصول إلى المعلومات، وتعزز التواصل، وتفتح المجال لمشاركة الطلاب وأولياء الأمور في تطوير الخدمات المدرسية.</p>
-      <div class="actions"><a class="btn primary" href="#features">اكتشف فكرة المشروع</a><a class="btn secondary" href="#participate">ساهم باقتراحك</a></div>
-    </div>
-    <div class="hero-foot"><span>معاً نصنع فرقاً</span><i></i></div>
-  </section>
-  <div class="status"><div class="container status-inner"><span class="dot"></span><span>هذه نسخة تعريفية أولية للمبادرة، والمشروع قيد التطوير وجمع المقترحات.</span></div></div>
 
-  <section class="section" id="about">
-    <div class="container about">
-      <div><span class="tag">عن المبادرة</span><h2 class="heading">مدرستنا تستحق أن تواكب المستقبل</h2>
-        <p class="intro">تهدف مبادرة «نحو التحول الرقمي لمدرسة سكر سنار النموذجية» إلى المساهمة في تطوير البيئة المدرسية رقمياً، وتسهيل وصول الطلاب وأولياء الأمور إلى المعلومات، وتعزيز التواصل والمشاركة في بناء مستقبل رقمي يواكب تطلعات المدرسة.</p>
-      </div>
-      <div class="vision-card"><div class="vision-icon">✦</div><h3>الفكرة تبدأ بالمشاركة</h3><p>نؤمن أن تطوير المدرسة مسؤولية تشاركية، وأن أفكار الطلاب والخريجين وأولياء الأمور يمكن أن تساعد في رسم خدمات رقمية أكثر فائدة وملاءمة لاحتياجات المجتمع المدرسي.</p></div>
+<main id="home">
+  <section class="hero">
+    <img class="hero-cover" src="https://cdn.jsdelivr.net/gh/Zezo200241/sukar-sennar-v2@5092ab20a64b64339e44e44df9dec52d908aeaf6/assets/school-cover.jpg" alt="مدرسة سكر سنار النموذجية" fetchpriority="high">
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <span class="eyebrow">انتماء • تواصل • عطاء</span>
+      <h1>رابطة مدرسة<br>سكر سنار النموذجية</h1>
+      <p>مدرستنا تجمعنا، والانتماء لها يصل الأجيال ببعضها.</p>
+      <a class="primary" href="#about">تعرّف على الرابطة</a>
     </div>
+    <div class="hero-mark" aria-hidden="true">مدرستنا تجمعنا</div>
   </section>
 
-  <section class="section features" id="features">
-    <div class="container">
-      <div class="section-head"><div><span class="tag">الرؤية المستقبلية</span><h2 class="heading">ماذا نطمح أن يقدم المشروع؟</h2></div><span class="subnote">هذه أفكار مقترحة قابلة للمراجعة والاعتماد بالتنسيق مع إدارة المدرسة.</span></div>
-      <div class="cards">
-        <article class="feature"><span class="num">01 / المعلومات</span><h3>بوابة تعريفية للمدرسة</h3><p>معلومات المدرسة، نبذتها، وأقسامها وما يتم اعتماده للنشر.</p></article>
-        <article class="feature"><span class="num">02 / التواصل</span><h3>قنوات تواصل منظمة</h3><p>تسهيل وصول الطلاب وأولياء الأمور إلى قنوات التواصل والإعلانات.</p></article>
-        <article class="feature"><span class="num">03 / الإعلانات</span><h3>الأخبار والتنبيهات</h3><p>نشر الإعلانات والمواعيد والأنشطة بعد مراجعتها واعتمادها.</p></article>
-        <article class="feature"><span class="num">04 / الخدمات</span><h3>خدمات إلكترونية مستقبلية</h3><p>دراسة إمكانية تقديم طلبات واستفسارات وخدمات مدرسية عبر الإنترنت.</p></article>
-        <article class="feature"><span class="num">05 / المشاركة</span><h3>مساحة للمقترحات</h3><p>الاستماع إلى أفكار الطلاب والخريجين وأولياء الأمور لتطوير المشروع.</p></article>
-        <article class="feature"><span class="num">06 / التطوير</span><h3>تحديث تدريجي</h3><p>إضافة المزايا على مراحل وفق الأولويات والإمكانات وموافقة الإدارة.</p></article>
-      </div>
-      <div class="roadmap">
-        <div class="step"><b>المرحلة الأولى</b><span>التعريف بالمبادرة وجمع الآراء</span></div>
-        <div class="step"><b>المرحلة الثانية</b><span>مراجعة الاحتياجات والأولويات</span></div>
-        <div class="step"><b>المرحلة الثالثة</b><span>تطوير الخدمات المقترحة</span></div>
-        <div class="step"><b>المرحلة الرابعة</b><span>الإطلاق والتحديث المستمر</span></div>
+  <div class="status-strip">
+    <span>نبقى على تواصل</span><i></i><span>مدرستنا تجمعنا</span><i></i><span>بالعلم نبني مستقبلنا</span>
+  </div>
+
+  <section class="section intro" id="about">
+    <div class="section-head"><span>التعريف بالرابطة</span><h2>من نحن؟</h2></div>
+    <div class="intro-grid">
+      <div class="seal-wrap"><img class="seal" src="https://cdn.jsdelivr.net/gh/Zezo200241/sukar-sennar-v2@5092ab20a64b64339e44e44df9dec52d908aeaf6/assets/association-logo.png" alt="شعار رابطة مدرسة سكر سنار النموذجية" loading="lazy"></div>
+      <div class="intro-copy">
+        <p class="lead">رابطة مدرسة سكر سنار النموذجية كيان يجمع الطلاب الحاليين وطلاب المعاهد والجامعات والخريجين والمعلمين ومحبي المدرسة.</p>
+        <p>تأسست الرابطة تقريباً في أواخر أكتوبر 2026، لتكون مساحة جامعة لأبناء المدرسة، وتعزز التواصل بين أجيالها، وتفتح المجال للعمل المشترك من أجل المدرسة والمجتمع.</p>
+        <p class="quote">يجمعنا مكان واحد وذكريات مشتركة، ويصلنا هدف أن تبقى مدرستنا حاضرة في وجدان أبنائها.</p>
       </div>
     </div>
   </section>
 
-  <section class="participate" id="participate">
-    <div class="container participate-grid">
-      <div><span class="tag">صوتك مهم</span><h2 class="heading">شاركنا فكرتك لتطوير مدرستنا</h2><p class="intro">نرحب بمقترحات الطلاب والخريجين وأولياء الأمور. ستُعلن هنا قنوات المشاركة الرسمية بعد تجهيزها واعتمادها، حتى تصل الآراء إلى الجهة المسؤولة بصورة منظمة.</p></div>
-      <div class="channels">
-        <a class="channel channel-link whatsapp" href="https://chat.whatsapp.com/FJPq5iOdw374V8rt6Mm0ej?s=cl&amp;p=a&amp;iam=2" target="_blank" rel="noopener noreferrer">
-          <span class="channel-icon">◉</span><span><strong>مجموعة واتساب</strong><small>انضم للحوار وتبادل المقترحات</small></span><span class="channel-action">انضم للمجموعة <b>←</b></span>
-        </a>
-        <a class="channel channel-link facebook" href="https://www.facebook.com/profile.php?id=61596063331283" target="_blank" rel="noopener noreferrer">
-          <span class="channel-icon">f</span><span><strong>صفحة فيسبوك</strong><small>تابع أخبار المبادرة وتحديثاتها</small></span><span class="channel-action">زيارة الصفحة <b>←</b></span>
-        </a>
-        <div class="channel"><span class="channel-icon">✉</span><span><strong>استقبال المقترحات</strong><small>سيتم تفعيل قناة مخصصة لإرسال الأفكار</small></span><span class="pending">قريباً</span></div>
-      </div>
+  <section class="vision" id="vision">
+    <div class="section vision-inner">
+      <div class="section-head"><span>ما نطمح إليه</span><h2>رؤيتنا</h2></div>
+      <p class="vision-text">أن تكون الرابطة جسماً فاعلاً يساهم في رفع المستوى الأكاديمي والاجتماعي والثقافي، ويحافظ على مكانة مدرسة سكر سنار النموذجية، ويعزز صلتها بأبنائها ومجتمعها.</p>
     </div>
   </section>
 
-  <section class="responsibility">
-    <div class="container"><div class="responsibility-box"><div class="resp-icon">🎓</div><div><h3>الجهة المسؤولة عن الموقع والمبادرة</h3><p>رابطة طلاب مدرسة سكر سنار النموذجية بالجامعات و المعاهد العليا</p></div></div></div>
+  <section class="section goals" id="goals">
+    <div class="section-head">
+      <span>مجالات العمل</span>
+      <h2>أهدافنا</h2>
+      <p>هذه أهداف وتطلعات مستقبلية تسعى الرابطة إلى العمل عليها؛ ولم تبدأ الرابطة تنفيذ أنشطتها بعد.</p>
+    </div>
+    <div class="goal-grid">
+      <article class="goal-card"><h3>الأكاديمي والتعليمي</h3><p>الإسهام في دعم العملية التعليمية، ومساندة الطلاب، وتشجيع التفوق وتبادل الخبرات والمعارف.</p></article>
+      <article class="goal-card"><h3>تأهيل المدرسة وصيانتها</h3><p>السعي إلى تحسين البيئة المدرسية، وصيانة الفصول والمرافق، ودعم احتياجات المدرسة الأساسية.</p></article>
+      <article class="goal-card"><h3>الثقافي والاجتماعي</h3><p>تعزيز الروابط بين أبناء المدرسة، وتشجيع المبادرات الثقافية والاجتماعية والرياضية.</p></article>
+      <article class="goal-card"><h3>خدمة المجتمع والتطوع</h3><p>تنمية روح المبادرة والمسؤولية المجتمعية، والمشاركة في الأعمال التطوعية الهادفة.</p></article>
+      <article class="goal-card"><h3>الإعلام والتوثيق</h3><p>توثيق تاريخ المدرسة وذاكرتها، وإبراز قصص أبنائها، وتطوير وسائل التواصل والإعلام.</p></article>
+      <article class="goal-card"><h3>التواصل وتنمية العلاقات</h3><p>ربط الطلاب الحاليين بالجامعيين والخريجين والمعلمين، وبناء جسور التواصل وتبادل الخبرات.</p></article>
+      <article class="goal-card"><h3>الاستدامة والتطوير</h3><p>بناء عمل مؤسسي مستمر، وتطوير المبادرات والشراكات، وضمان استمرارية الرابطة وتحسين أدائها.</p></article>
+    </div>
+  </section>
+
+  <section class="section posts" id="posts">
+    <div class="section-head">
+      <span>آخر المستجدات</span>
+      <h2>منشورات الرابطة</h2>
+      <p>نبدأ بالتعريف بالرابطة، وستُعرض الأخبار والإعلانات هنا عند بدء النشاط.</p>
+    </div>
+    <div id="postsContainer" class="posts-list"><p class="loading-posts">جارٍ تحميل منشورات الرابطة...</p></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner section">
+      <div class="contact-copy">
+        <span class="eyebrow">نبقى على تواصل</span>
+        <h2>مدرستنا تجمعنا</h2>
+        <p>هذه مساحة تجمع أبناء مدرسة سكر سنار النموذجية، وتقرّب الطلاب والخريجين والمعلمين وكل من يحمل للمدرسة مكانة خاصة.</p>
+        <div class="contact-links">
+          <a href="https://chat.whatsapp.com/FJPq5iOdw374V8rt6Mm0ej?s=cl&amp;p=a&amp;iam=2" target="_blank" rel="noopener noreferrer">مجموعة واتساب</a>
+          <a href="https://www.facebook.com/profile.php?id=61596063331283" target="_blank" rel="noopener noreferrer">صفحة فيسبوك</a>
+        </div>
+      </div>
+      <img class="contact-logo" src="https://cdn.jsdelivr.net/gh/Zezo200241/sukar-sennar-v2@5092ab20a64b64339e44e44df9dec52d908aeaf6/assets/association-logo.png" alt="شعار الرابطة" loading="lazy">
+    </div>
   </section>
 </main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-top"><span class="footer-name">نحو التحول الرقمي لمدرسة سكر سنار النموذجية</span><a class="hashtag" href="#home">#سكرنا_تستحق</a></div>
-    <div class="copyright"><span>© <span id="year"></span> · مبادرة طلابية قيد التطوير</span><span>المحتوى التعريفي لا يمثل إعلاناً عن خدمات مفعّلة أو معتمدة بعد.</span></div>
+
+<footer class="site-footer">
+  <img src="https://cdn.jsdelivr.net/gh/Zezo200241/sukar-sennar-v2@5092ab20a64b64339e44e44df9dec52d908aeaf6/assets/association-logo.png" alt="شعار الرابطة" loading="lazy">
+  <strong>رابطة مدرسة سكر سنار النموذجية</strong>
+  <span>بالعلم نبني مستقبلنا</span>
+  <div class="footer-links">
+    <a href="https://chat.whatsapp.com/FJPq5iOdw374V8rt6Mm0ej?s=cl&amp;p=a&amp;iam=2" target="_blank" rel="noopener noreferrer">واتساب</a>
+    <a href="https://www.facebook.com/profile.php?id=61596063331283" target="_blank" rel="noopener noreferrer">فيسبوك</a>
+    <a href="admin.html">إدارة المنشورات</a>
   </div>
+  <small>مدرستنا تجمعنا</small>
 </footer>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  const menuButton = document.querySelector(".menu");
-  const navLinks = document.querySelector(".links");
-  menuButton.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-  });
-  navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuButton.setAttribute("aria-expanded", "false");
-  }));
-</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
