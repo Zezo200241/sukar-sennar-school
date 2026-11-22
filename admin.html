@@ -1,91 +1,83 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>إدارة منشورات الرابطة</title>
-<link rel="stylesheet" href="style.css">
-<style>
-.admin{max-width:850px;margin:40px auto;padding:22px}
-.admin input,.admin textarea{width:100%;box-sizing:border-box;padding:12px;border:1px solid #ccd5ce;border-radius:7px;font:inherit;margin:6px 0 15px}
-.admin label{font-weight:700}
-.admin button{margin:5px}
-.admin .notice{background:#f7f1df;padding:14px;border-radius:8px}
-.admin .post-row{padding:12px;border-bottom:1px solid #ddd}
-#status{padding:10px;white-space:pre-wrap}
-#editor[hidden],#login[hidden],#recovery[hidden]{display:none}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#10264d">
+  <title>إدارة منشورات الرابطة</title>
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Zezo200241/sukar-sennar-v2@5092ab20a64b64339e44e44df9dec52d908aeaf6/assets/association-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header class="topbar">
-<a class="brand" href="index.html"><img src="assets/association-logo.jpg" alt="شعار الرابطة">إدارة منشورات الرابطة</a>
-<a href="index.html">عرض الموقع</a>
+<body class="admin-page">
+<header class="topbar admin-topbar">
+  <a class="brand" href="index.html"><img src="https://cdn.jsdelivr.net/gh/Zezo200241/sukar-sennar-v2@5092ab20a64b64339e44e44df9dec52d908aeaf6/assets/association-logo.png" alt="شعار الرابطة"><span>إدارة منشورات الرابطة</span></a>
+  <a href="index.html" style="font-weight:800;text-decoration:none">عرض الموقع</a>
 </header>
-
 <main class="admin">
-<h1>لوحة إدارة المنشورات</h1>
-<p class="notice">الدخول متاح لحسابات المشرفين المعتمدة فقط. لا تشارك كلمة المرور مع أي شخص.</p>
-<p id="status" role="status" aria-live="polite"></p>
+  <h1>لوحة إدارة المنشورات</h1>
+  <p class="notice">الدخول متاح لحسابات المشرفين المعتمدة فقط. لا تشارك كلمة المرور مع أي شخص.</p>
+  <p id="status" role="status" aria-live="polite"></p>
 
-<section id="recovery" hidden>
-<h2>تعيين كلمة مرور جديدة</h2>
-<p>أدخل كلمة المرور الجديدة لحساب المشرف.</p>
-<label for="newPassword">كلمة المرور الجديدة</label>
-<input id="newPassword" type="password" autocomplete="new-password" minlength="8">
-<label for="confirmPassword">تأكيد كلمة المرور</label>
-<input id="confirmPassword" type="password" autocomplete="new-password" minlength="8">
-<button class="primary" id="updatePasswordBtn" type="button">حفظ كلمة المرور الجديدة</button>
-</section>
+  <section id="recovery" hidden>
+    <h2>تعيين كلمة مرور جديدة</h2>
+    <p>أدخل كلمة المرور الجديدة لحساب المشرف.</p>
+    <label for="newPassword">كلمة المرور الجديدة</label>
+    <input id="newPassword" type="password" autocomplete="new-password" minlength="8">
+    <label for="confirmPassword">تأكيد كلمة المرور</label>
+    <input id="confirmPassword" type="password" autocomplete="new-password" minlength="8">
+    <button class="primary" id="updatePasswordBtn" type="button">حفظ كلمة المرور الجديدة</button>
+  </section>
 
-<section id="login">
-<h2>دخول الإدارة</h2>
-<label for="email">البريد الإلكتروني</label>
-<input id="email" type="email" autocomplete="username">
-<label for="password">كلمة المرور</label>
-<input id="password" type="password" autocomplete="current-password">
-<button class="primary" id="loginBtn" type="button">تسجيل الدخول</button>
-</section>
+  <section id="login">
+    <h2>دخول الإدارة</h2>
+    <label for="email">البريد الإلكتروني</label>
+    <input id="email" type="email" autocomplete="username">
+    <label for="password">كلمة المرور</label>
+    <input id="password" type="password" autocomplete="current-password">
+    <button class="primary" id="loginBtn" type="button">تسجيل الدخول</button>
+  </section>
 
-<section id="editor" hidden>
-<h2>إضافة منشور</h2>
-<label for="title">العنوان</label>
-<input id="title" maxlength="250" required>
-<label for="content">المحتوى</label>
-<textarea id="content" rows="8" required></textarea>
-<label for="coverFile">رفع صورة الغلاف</label>
-<input id="coverFile" type="file" accept="image/jpeg,image/png,image/webp">
-<p>أو أدخل رابط صورة موجودة مسبقاً:</p>
-<input id="coverUrl" type="url" placeholder="https://...">
-<button class="primary" id="saveBtn" type="button">نشر المنشور</button>
-<button class="outline" id="logoutBtn" type="button">تسجيل الخروج</button>
-<h2>المنشورات الحالية</h2>
-<div id="postsList"></div>
-
+  <section id="editor" hidden>
+    <h2>إضافة منشور</h2>
+    <label for="title">العنوان</label>
+    <input id="title" maxlength="250" required>
+    <label for="content">المحتوى</label>
+    <textarea id="content" rows="8" required></textarea>
+    <label for="coverFile">رفع صورة الغلاف</label>
+    <input id="coverFile" type="file" accept="image/jpeg,image/png,image/webp">
+    <p>أو أدخل رابط صورة موجودة مسبقاً:</p>
+    <input id="coverUrl" type="url" placeholder="https://...">
+    <button class="primary" id="saveBtn" type="button">نشر المنشور</button>
+    <button class="outline" id="logoutBtn" type="button">تسجيل الخروج</button>
+    <h2>المنشورات الحالية</h2>
+    <div id="postsList"></div>
 
     <section id="analyticsPanel" class="analytics-panel" hidden aria-labelledby="analyticsHeading">
-    <div class="analytics-heading">
-      <div>
-        <h2 id="analyticsHeading">إحصائيات الموقع</h2>
-        <p>بيانات مباشرة من المنشورات وسجلات تتبع المشاهدة.</p>
+      <div class="analytics-heading">
+        <div>
+          <h2 id="analyticsHeading">إحصائيات الموقع</h2>
+          <p>بيانات مباشرة من المنشورات وسجلات تتبع المشاهدة.</p>
+        </div>
+        <button class="outline" id="refreshAnalyticsBtn" type="button">تحديث الإحصائيات</button>
       </div>
-      <button class="outline" id="refreshAnalyticsBtn" type="button">تحديث الإحصائيات</button>
-    </div>
-    <p id="analyticsStatus" class="analytics-status" role="status" aria-live="polite">بانتظار تحميل الإحصائيات...</p>
-    <div id="analyticsMetrics" class="analytics-metrics"></div>
-    <div class="analytics-chart-card">
-      <h3>سجلات المشاهدة خلال آخر 7 أيام</h3>
-      <div id="analyticsDailyChart" class="analytics-daily-chart" aria-label="مخطط سجلات المشاهدة اليومية"></div>
-    </div>
-    <div class="analytics-chart-card">
-      <h3>أداء المنشورات</h3>
-      <div id="analyticsPosts" class="analytics-posts"></div>
-    </div>
-    <p class="analytics-disclaimer">الزائر الفريد يعني معرّف متصفح مسجلاً، وليس بالضرورة شخصاً واحداً. وسجلات التتبع قد تختلف عن المشاهدات إذا تغيّرت آلية التسجيل أو صلاحيات القراءة.</p>
-  </section>
+      <p id="analyticsStatus" class="analytics-status" role="status" aria-live="polite">بانتظار تحميل الإحصائيات...</p>
+      <div id="analyticsMetrics" class="analytics-metrics"></div>
+      <div class="analytics-chart-card">
+        <h3>سجلات المشاهدة خلال آخر 7 أيام</h3>
+        <div id="analyticsDailyChart" class="analytics-daily-chart" aria-label="مخطط سجلات المشاهدة اليومية"></div>
+      </div>
+      <div class="analytics-chart-card">
+        <h3>أداء المنشورات</h3>
+        <div id="analyticsPosts" class="analytics-posts"></div>
+      </div>
+      <p class="analytics-disclaimer">الزائر الفريد يعني معرّف متصفح مسجلاً، وليس بالضرورة شخصاً واحداً. وسجلات التتبع قد تختلف عن المشاهدات إذا تغيّرت آلية التسجيل أو صلاحيات القراءة.</p>
+    </section>
   </section>
 </main>
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="admin.js"></script>
